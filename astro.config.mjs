@@ -15,7 +15,9 @@ export default defineConfig({
         },
       },
       social: {
-        github: "https://github.com/withastro/starlight",
+        github: "https://github.com/arafipro",
+        "x.com": "https://x.com/arafipro",
+        youtube: "https://youtube.com/@arafipro",
       },
       sidebar: [
         {
