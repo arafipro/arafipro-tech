@@ -6,7 +6,7 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Docs with Tailwind",
+      title: "TypeScriptでフルスタックエンジニア",
       defaultLocale: "root",
       locales: {
         root: {
