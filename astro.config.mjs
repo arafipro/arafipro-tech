@@ -7,6 +7,13 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Docs with Tailwind",
+      defaultLocale: "root",
+      locales: {
+        root: {
+          label: "Japanese",
+          lang: "ja",
+        },
+      },
       social: {
         github: "https://github.com/withastro/starlight",
       },
