@@ -7,6 +7,26 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "TypeScriptでフルスタックエンジニア",
+      head: [
+        {
+          tag: "script",
+          attrs: {
+            src: "https://www.googletagmanager.com/gtag/js?id=G-M9Y1L3NSGP",
+            async: true,
+          },
+        },
+        {
+          tag: "script",
+          content: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-M9Y1L3NSGP');
+`,
+        },
+      ],
+
       defaultLocale: "root",
       locales: {
         root: {
