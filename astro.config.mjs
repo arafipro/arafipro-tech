@@ -26,6 +26,17 @@ export default defineConfig({
             directory: "fullstack",
           },
         },
+        {
+          label: "Cloudflare Workers",
+          items: [
+            {
+              label: "OpenAI API+LangChainを使ったAPI作成の基礎",
+              autogenerate: {
+                directory: "workers/langchain-openai-base-api",
+              },
+            },
+          ],
+        },
       ],
       customCss: ["./src/tailwind.css"],
     }),

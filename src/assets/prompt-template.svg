@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320">
+  <style>
+    .small { font: italic 13px sans-serif; }
+    .heavy { font: bold 20px sans-serif; }
+    .arrow { fill: none; stroke: black; stroke-width: 2; }
+  </style>
+  
+  <!-- User Input -->
+  <rect x="20" y="110" width="150" height="80" fill="#FFB3BA" stroke="black" />
+  <text x="95" y="155" text-anchor="middle" class="heavy">ユーザー入力</text>
+  
+  <!-- PromptTemplate -->
+  <rect x="230" y="90" width="160" height="120" fill="#BAFFC9" stroke="black" />
+  <text x="310" y="120" text-anchor="middle" class="heavy">PromptTemplate</text>
+  <line x1="240" y1="130" x2="380" y2="130" stroke="black" stroke-width="1"/>
+  <text x="310" y="145" text-anchor="middle" class="small">1. 入力受け取り</text>
+  <text x="310" y="165" text-anchor="middle" class="small">2. データ変換</text>
+  <text x="310" y="185" text-anchor="middle" class="small">3. プロンプト出力</text>
+  
+  <!-- Language Model Prompt -->
+  <rect x="450" y="110" width="150" height="80" fill="#BAE1FF" stroke="black" />
+  <text x="525" y="140" text-anchor="middle" class="heavy">言語モデルへの</text>
+  <text x="525" y="170" text-anchor="middle" class="heavy">プロンプト</text>
+  
+  <!-- Arrows -->
+  <path d="M170 150 H230" class="arrow" marker-end="url(#arrowhead)"/>
+  <path d="M390 150 H450" class="arrow" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+  </defs>
+</svg>
