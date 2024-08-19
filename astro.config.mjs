@@ -25,6 +25,14 @@ gtag('js', new Date());
 gtag('config', 'G-M9Y1L3NSGP');
 `,
         },
+        {
+          tag: "script",
+          attrs: {
+            src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2054344840815103",
+            async: true,
+            crossorigin: "anonymous",
+          },
+        },
       ],
 
       defaultLocale: "root",
