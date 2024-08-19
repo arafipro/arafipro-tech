@@ -2,7 +2,7 @@
 title: OutputParserの使用
 sidebar:
   order: 7
-draft: true
+draft: false
 ---
 
 OutputParserは、言語モデルからの応答から文字列型の応答のみを抽出するために使用されます。

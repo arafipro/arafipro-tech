@@ -2,7 +2,7 @@
 title: プロジェクトの準備
 sidebar:
   order: 2
-draft: true
+draft: false
 ---
 
 ## プロジェクトの作成

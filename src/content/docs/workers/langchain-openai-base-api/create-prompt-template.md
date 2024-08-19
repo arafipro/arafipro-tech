@@ -2,7 +2,7 @@
 title: PromptTemplateの作成
 sidebar:
   order: 8
-draft: true
+draft: false
 ---
 
 ## PromptTemplateとは

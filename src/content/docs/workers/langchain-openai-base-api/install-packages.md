@@ -2,7 +2,7 @@
 title: パッケージを導入
 sidebar:
   order: 4
-draft: true
+draft: false
 ---
 
 ## LangChain

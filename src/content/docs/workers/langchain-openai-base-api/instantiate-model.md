@@ -2,7 +2,7 @@
 title: OpenAIモデルをインスタンス化
 sidebar:
   order: 5
-draft: true
+draft: false
 ---
 
 ## 環境変数を呼び出し

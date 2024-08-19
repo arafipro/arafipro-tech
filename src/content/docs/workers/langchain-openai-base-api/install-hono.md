@@ -2,7 +2,7 @@
 title: Honoを導入
 sidebar:
   order: 3
-draft: true
+draft: false
 ---
 
 ## Honoをインストール

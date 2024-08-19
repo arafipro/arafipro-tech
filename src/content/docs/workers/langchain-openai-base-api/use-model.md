@@ -2,7 +2,7 @@
 title: OpenAIモデルの使用
 sidebar:
   order: 6
-draft: true
+draft: false
 ---
 
 インスタンス化したOpenAIモデル`model`を使用して、`invoke`メソッドにメッセージのリストを渡します。  
