@@ -33,8 +33,14 @@ gtag('config', 'G-M9Y1L3NSGP');
             crossorigin: "anonymous",
           },
         },
+        {
+          tag: "meta",
+          attrs: {
+            name: "google-adsense-account",
+            content: "ca-pub-2054344840815103",
+          },
+        },
       ],
-
       defaultLocale: "root",
       locales: {
         root: {
