@@ -2,7 +2,7 @@
 title: スキーマを変更
 sidebar:
   order: 10
-draft: true
+draft: false
 ---
 
 次は、`language`プロパティと、`text`プロパティに引数から値を渡すようにします。
@@ -29,4 +29,4 @@ POSTメソッドのリクエストから`language`と`text`の値を取得しま
 + const { language, text } = await c.req.valid("json");
 ```
 
-定数bodyを定数`language`と`text`に変更します。
+定数`body`を定数`language`と`text`に変更します。
