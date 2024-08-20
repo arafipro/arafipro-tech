@@ -71,6 +71,7 @@ gtag('config', 'G-M9Y1L3NSGP');
             },
           ],
         },
+        { label: "プライバシーポリシー", link: "privacy-policy" },
       ],
       customCss: ["./src/tailwind.css"],
     }),
