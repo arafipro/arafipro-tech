@@ -6,7 +6,7 @@ draft: false
 ---
 
 LangChain Expression Language (LCEL) を使用して、LangChainモジュールをチェーン接続できます。  
-`pipe()`メソッドは、LangChainで2つの要素を組み合わせるために使用されます。  
+`pipe`メソッドは、LangChainで2つの要素を組み合わせるために使用されます。  
 これは、最適化されたストリーミングやトレースのサポートなど、いくつかの利点があります。
 
 ## チェーン接続
@@ -24,7 +24,7 @@ const chain = promptTemplate.pipe(model).pipe(parser);
 
 ## チェーン実行
 
-この例では、`language`と`text`を含むJavaScriptオブジェクトを引数として `invoke()`メソッドを使用しています。
+この例では、`language`と`text`を含むJavaScriptオブジェクトを引数として `invoke`メソッドを使用しています。
 
 ```javascript
 await chain.invoke({ language: "日本語", text: "hi" });
