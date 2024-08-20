@@ -64,7 +64,7 @@ gtag('config', 'G-M9Y1L3NSGP');
           label: "Cloudflare Workers",
           items: [
             {
-              label: "OpenAI API+LangChainを使ったAPI作成の基礎",
+              label: "OpenAI API+LangChainを使ったAPIを作る",
               autogenerate: {
                 directory: "workers/langchain-openai-base-api",
               },
