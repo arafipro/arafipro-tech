@@ -67,23 +67,25 @@ bun add @hono/zod-validator
 次に、zValidatorを使うためにコードを変更します。  
 ハイライトしているコードが変更箇所です。
 
-```ts title="src/index.ts" {1,3,7-9,11,12}
-import { zValidator } from "@hono/zod-validator";         // 追加
-import { Hono } from "hono";
-import { z } from "zod";                                  // 追加
-
-const app = new Hono();
-
-const schema = z.object({
-  prompt: z.string(),
-});
-
-app.post("/", zValidator("json", schema), async (c) => {  // 変更
-  const body = await c.req.valid("json");                 // 変更
-  return c.json(body);
-});
-
-export default app;
+```diff ts title="src/index.ts" {1,3,7-9,11,12}
++ import { zValidator } from "@hono/zod-validator";
+  import { Hono } from "hono";
++ import { z } from "zod";
+  
+  const app = new Hono();
+  
+  const schema = z.object({
+    prompt: z.string(),
+  });
+  
+- app.post("/", async (c) => {
++ app.post("/", zValidator("json", schema), async (c) => {
+-   const body = await c.req.json();
++   const body = await c.req.valid("json");
+    return c.json(body);
+  });
+  
+  export default app;
 ```
 
 ## バリデーションの動作確認
