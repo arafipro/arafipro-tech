@@ -2,20 +2,29 @@
 import Default from '@astrojs/starlight/components/Footer.astro';
 import type { Props } from '@astrojs/starlight/props';
 
+const isHomepage = Astro.props.slug === '';
 const currentYear = new Date().getFullYear();
 ---
 
-<Default {...Astro.props}>
-    <slot />
-</Default>
-<div class="flex justify-around">
-    <a href="/privacy-policy" class="no-underline">
-        プライバシーポリシー
-    </a>
-    <a href="/disclaimer" class="no-underline">
-        免責事項
-    </a>
-</div>
-<div class="text-sm flex justify-center">
-    &copy; {currentYear} TypeScriptでフルスタックエンジニア All rights reserved.
-</div>
+{
+  isHomepage ? (
+		<Default {...Astro.props}>
+      <slot />
+    </Default>
+		<div class="flex justify-around">
+			<a href="/privacy-policy" class="no-underline text-black">
+					プライバシーポリシー
+			</a>
+			<a href="/disclaimer" class="no-underline text-black">
+					免責事項
+			</a>
+		</div>
+		<div class="mt-8 text-sm flex justify-center">
+			&copy; {currentYear} TypeScriptでフルスタックエンジニア All rights reserved.
+		</div>  
+	) : (
+    <Default {...Astro.props}>
+      <slot />
+    </Default>
+  )
+}
