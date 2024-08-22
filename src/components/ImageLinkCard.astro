@@ -12,13 +12,24 @@ const { title, id, pass } = Astro.props;
 
 <div class="text-xl font-bold text-black border-2 border-slate-200 rounded-lg p-2">
 	<div class="mb-1">{title}</div>
-	<img src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`} alt="">
-	{pass ? (
-		<CardGrid>
-			<LinkCard title="解説記事" href={pass} />
+	{(pass && id) &&
+		<>
+			<CardGrid>
+				<LinkCard title="解説記事" href={pass} />
+				<LinkCard title="YouTube" href={`https://youtu.be/${id}`} />
+			</CardGrid>
+			<img src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`} alt="">
+		</>
+	}
+	{(!pass && id) && 
+		<>
 			<LinkCard title="YouTube" href={`https://youtu.be/${id}`} />
-		</CardGrid>
-	) : (
-		<LinkCard title="YouTube" href={`https://youtu.be/${id}`} />
-	)}
+			<img src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`} alt="">
+		</>
+	}
+	{(pass && !id) && 
+		<>
+			<LinkCard title="解説記事" href={pass} />
+		</>
+	}
 </div>
