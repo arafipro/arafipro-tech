@@ -54,12 +54,12 @@ gtag('config', 'G-M9Y1L3NSGP');
         youtube: "https://youtube.com/@arafipro",
       },
       sidebar: [
-        {
-          label: "フルスタックエンジニアになるために",
-          autogenerate: {
-            directory: "fullstack",
-          },
-        },
+        // {
+        //   label: "フルスタックエンジニアになるために",
+        //   autogenerate: {
+        //     directory: "fullstack",
+        //   },
+        // },
         {
           label: "Cloudflare Workers",
           items: [
