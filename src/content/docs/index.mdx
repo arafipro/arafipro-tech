@@ -14,25 +14,20 @@ hero:
     </span>
     で<br>フルスタックエンジニア
   tagline: フルスタックエンジニアになって、個人でサービスを提供する
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: フルスタックエンジニアになるには
-      description: フルスタックエンジニアになるためにどのようなことを学ぶべきかを説明します。
-      link: /fullstack/
-      icon: right-arrow
 ---
 
-import { LinkCard } from "@astrojs/starlight/components";
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+import ImageLinkCard from "../../components/ImageLinkCard.astro";
+import { BackendList } from "../../constants/youtube-list";
 
-## バックエンド
+## YouTube
 
-<LinkCard
-  title="OpenAI API+LangChainを使ったAPIを作る"
-  href="/workers/langchain-openai-base-api/intro"
-
-/>
-
-{/* ## フロントエンド */}
-
-{/* <LinkCard title="Cloudflare Pages + Next.js(仮)" href="/" /> */}
+<CardGrid>
+	{BackendList.map((list)=> (
+		<ImageLinkCard
+			id={list.id}
+			title={list.title}
+			pass={list.pass}
+		/>
+))}
+</CardGrid>
