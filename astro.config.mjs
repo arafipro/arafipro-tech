@@ -69,7 +69,7 @@ gtag('config', 'G-M9Y1L3NSGP');
       components: {
         Footer: "./src/components/ConditionalFooter.astro",
       },
-      customCss: ["./src/tailwind.css"],
+      customCss: ["./src/tailwind.css", "./src/default.css"],
     }),
     tailwind({ applyBaseStyles: false }),
   ],
