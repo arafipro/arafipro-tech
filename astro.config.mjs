@@ -54,12 +54,6 @@ gtag('config', 'G-M9Y1L3NSGP');
         youtube: "https://youtube.com/@arafipro",
       },
       sidebar: [
-        // {
-        //   label: "フルスタックエンジニアになるために",
-        //   autogenerate: {
-        //     directory: "fullstack",
-        //   },
-        // },
         {
           label: "Cloudflare Workers",
           items: [
@@ -72,6 +66,9 @@ gtag('config', 'G-M9Y1L3NSGP');
           ],
         },
       ],
+      components: {
+        Footer: "./src/components/ConditionalFooter.astro",
+      },
       customCss: ["./src/tailwind.css"],
     }),
     tailwind({ applyBaseStyles: false }),
