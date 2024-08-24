@@ -55,6 +55,17 @@ gtag('config', 'G-M9Y1L3NSGP');
       },
       sidebar: [
         {
+          label: "Cloudflare Pages",
+          items: [
+            {
+              label: "auth-custom-app",
+              autogenerate: {
+                directory: "pages/auth-custom-app",
+              },
+            },
+          ],
+        },
+        {
           label: "Cloudflare Workers",
           items: [
             {
