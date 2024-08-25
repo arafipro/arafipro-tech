@@ -51,7 +51,7 @@ export default function SigninButton() {
       }}
     >
       <Button type="submit" variant={"outline"}>
-        Sign in
+        Sign In
       </Button>
     </form>
   );
