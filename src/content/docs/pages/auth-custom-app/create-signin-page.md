@@ -1,5 +1,5 @@
 ---
-title: サインインのページを作成
+title: サインインページを作成
 sidebar:
   order: 3
 draft: true

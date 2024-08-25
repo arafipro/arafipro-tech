@@ -1,5 +1,5 @@
 ---
-title: サインインのページをカスタマイズ
+title: サインインページをカスタマイズ
 sidebar:
   order: 4
 draft: true
