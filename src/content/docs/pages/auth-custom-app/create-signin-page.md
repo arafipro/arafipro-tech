@@ -5,7 +5,9 @@ sidebar:
 draft: true
 ---
 
-まずは、サインインのページを作成します。
+新たに、サインインページを作成します。
+
+## `auth.ts`を変更
 
 `auth.ts`を開いて、`providers`プロパティの下に`pages`プロパティを追加します。
 `pages`プロパティには、`signIn`プロパティを追加して、パス`signin`を指定します。
@@ -23,19 +25,24 @@ draft: true
   });
 ```
 
-次は、実際に`signin/page.tsx`を作成します。
+## サインインページを作成
+
+まずは、`signin/page.tsx`を作成します。
 `rfc`と入力して、スニペットを呼び出して、`<div>`内の`page`を`signin page`に変更します。
 
 ```ts title="signin/page.tsx"
 export default function page() {
-  return <div>signin page</div>;
+	return <div>signin page</div>;
 }
 ```
 
 それでは、`Sign In`ボタンをクリックします。
 すると、`signin page`と表示されました。
 `signin/page.tsx`が呼び出されたことがわかります。
-次は、`signin`の機能を`signin/page.tsx`に移行します。
+
+## サインインページに機能を移行
+
+`signin`の機能を`signin/page.tsx`に移行します。
 `app/(main)/_components/signin-button.tsx`を開いて、`signIn`の`import`と`<form>`の部分をコピーします。
 
 ```ts title="app/(main)/_components/signin-button.tsx" {1,2,6-16}
@@ -81,7 +88,7 @@ export default function SigninButton() {
   }
 ```
 
-また、`signIn`関数に2つの引数を渡します。
+次に、`signIn`関数に2つの引数を渡します。
 第1引数には、`provider`を指定します。
 ここでは、`github`を指定して、`github`のサインイン機能を呼び出すように明示的に指定します。
 第2引数には、`redirectTo`プロパティを追加して、リダイレクト先のパスを指定します。
@@ -107,6 +114,8 @@ export default function SigninButton() {
     );
   }
 ```
+
+## SigninButtonコンポーネントを修正
 
 `app/(main)/_components/signin-button.tsx`に戻って、`signin/page.tsx`を開くように変更します。
 
