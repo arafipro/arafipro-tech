@@ -1,0 +1,15 @@
+---
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div class="border-2 border-slate-200 rounded-lg p-2">
+	<a href={`https://youtu.be/${id}`} >
+		<p class="text-lg font-bold text-black">YouTube動画</p>
+		<img src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`} alt="">
+	</a>
+</div>
