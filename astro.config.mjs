@@ -55,26 +55,20 @@ gtag('config', 'G-M9Y1L3NSGP');
       },
       sidebar: [
         {
-          label: "Cloudflare Pages",
-          items: [
-            {
-              label: "auth-custom-app",
-              autogenerate: {
-                directory: "pages/auth-custom-app",
-              },
-            },
-          ],
+          label: "Auth.js(NextAuth)を学ぶロードマップ",
+					link: "loadmap/auth",
         },
         {
-          label: "Cloudflare Workers",
-          items: [
-            {
-              label: "OpenAI API+LangChainを使ったAPIを作る",
-              autogenerate: {
-                directory: "workers/langchain-openai-base-api",
-              },
-            },
-          ],
+          label: "Auth.jsを使って実装した認証ボタンをカスタマイズする",
+          autogenerate: {
+            directory: "pages/auth-custom-app",
+          },
+        },
+        {
+          label: "OpenAI API+LangChainを使ったAPIを作る",
+          autogenerate: {
+            directory: "workers/langchain-openai-base-api",
+          },
         },
       ],
       components: {
