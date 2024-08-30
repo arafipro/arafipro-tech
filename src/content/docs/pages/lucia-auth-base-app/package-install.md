@@ -1,7 +1,7 @@
 ---
 title: 必要なパッケージをインストール
 sidebar:
-  order: 2
+  order: 3
 draft: false
 ---
 

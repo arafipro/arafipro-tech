@@ -1,7 +1,7 @@
 ---
 title: 本チュートリアルで学ぶこと
 sidebar:
-  order: 0
+  order: 1
 prev: false
 draft: false
 ---

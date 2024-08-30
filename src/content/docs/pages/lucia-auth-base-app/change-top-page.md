@@ -1,7 +1,7 @@
 ---
 title: トップページを変更
 sidebar:
-  order: 8
+  order: 9
 next: false
 draft: false
 ---

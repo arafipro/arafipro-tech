@@ -1,7 +1,7 @@
 ---
 title: ユーザー登録機能
 sidebar:
-  order: 5
+  order: 6
 draft: false
 ---
 

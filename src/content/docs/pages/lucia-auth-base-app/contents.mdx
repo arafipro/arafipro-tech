@@ -1,0 +1,19 @@
+---
+title: 目次
+sidebar:
+  order: 0
+prev: false
+next: false	
+draft: false
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Contents } from './contents';
+
+## Luciaを使って最低限の機能を実装する
+
+<CardGrid>
+	{Contents.map((content)=>(
+		<LinkCard title={`${content.id}. ${content.title}`} href={content.href} />
+	))}
+</CardGrid>

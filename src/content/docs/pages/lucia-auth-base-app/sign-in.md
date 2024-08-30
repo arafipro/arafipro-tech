@@ -1,7 +1,7 @@
 ---
 title: ログイン機能
 sidebar:
-  order: 6
+  order: 7
 draft: false
 ---
 

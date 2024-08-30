@@ -1,7 +1,7 @@
 ---
 title: プロジェクトの作成
 sidebar:
-  order: 1
+  order: 2
 draft: false
 ---
 

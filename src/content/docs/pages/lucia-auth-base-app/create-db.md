@@ -1,7 +1,7 @@
 ---
 title: 認証に必要なデータベースの準備
 sidebar:
-  order: 3
+  order: 4
 draft: false
 ---
 

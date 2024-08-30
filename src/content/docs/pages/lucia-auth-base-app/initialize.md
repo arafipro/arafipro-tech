@@ -1,7 +1,7 @@
 ---
 title: 初期化ファイルを作成
 sidebar:
-  order: 4
+  order: 5
 draft: false
 ---
 
