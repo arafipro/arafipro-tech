@@ -1,0 +1,18 @@
+---
+title: YouTube一覧
+template: splash
+---
+
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+import ImageLinkCard from "../../components/ImageLinkCard.astro";
+import { BackendList } from "../../constants/youtube-list";
+
+<CardGrid>
+	{BackendList.map((list)=> (
+		<ImageLinkCard
+			id={list.id}
+			title={list.title}
+			pass={list.pass}
+		/>
+))}
+</CardGrid>

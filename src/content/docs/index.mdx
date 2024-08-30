@@ -17,17 +17,8 @@ hero:
 ---
 
 import { CardGrid, LinkCard } from "@astrojs/starlight/components";
-import ImageLinkCard from "../../components/ImageLinkCard.astro";
-import { BackendList } from "../../constants/youtube-list";
-
-## YouTube
 
 <CardGrid>
-	{BackendList.map((list)=> (
-		<ImageLinkCard
-			id={list.id}
-			title={list.title}
-			pass={list.pass}
-		/>
-))}
+  <LinkCard title="解説記事" href="/loadmap/auth" />
+  <LinkCard title="YouTube一覧" href="/youtube" />
 </CardGrid>
