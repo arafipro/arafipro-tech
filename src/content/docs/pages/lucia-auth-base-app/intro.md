@@ -21,3 +21,7 @@ Luciaを使って、auth/Username and password authの最低限の機能を実�
 ## 参考サイト
 
 - [Lucia documentation](https://lucia-auth.com/)
+
+## GitHubリポジトリ
+
+https://github.com/arafipro/lucia-auth-base-app
