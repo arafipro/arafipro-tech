@@ -8,7 +8,7 @@ draft: false
 
 ## はじめに
 
-Luciaを使って、auth/Username and password authの最低限の機能を実装します。
+Luciaを使って、Username and password authの最低限の機能を実装します。
 
 ## 本チュートリアルで学ぶこと
 
