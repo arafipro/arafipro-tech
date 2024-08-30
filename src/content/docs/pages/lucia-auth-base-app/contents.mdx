@@ -3,17 +3,21 @@ title: 目次
 sidebar:
   order: 0
 prev: false
-next: false	
+next: false
 draft: false
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
-import { Contents } from './contents';
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+import appImage from "../../../../assets/images/lucia-auth-base-app-ss.jpg";
+import { Contents } from "./contents";
 
-## Luciaを使って最低限の機能を実装する
+## Lucia を使って最低限の機能を実装する
+
+<Image src={appImage} alt="Application Screen Shot" class="mx-auto w-96" />
 
 <CardGrid>
-	{Contents.map((content)=>(
-		<LinkCard title={`${content.id}. ${content.title}`} href={content.href} />
-	))}
+  {Contents.map((content) => (
+    <LinkCard title={`${content.id}. ${content.title}`} href={content.href} />
+  ))}
 </CardGrid>
