@@ -2,7 +2,7 @@
 title: 必要なパッケージをインストール
 sidebar:
   order: 2
-draft: true
+draft: false
 ---
 
 必要なパッケージをすべてインストールします。

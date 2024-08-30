@@ -56,7 +56,13 @@ gtag('config', 'G-M9Y1L3NSGP');
       sidebar: [
         {
           label: "Auth.js(NextAuth)を学ぶロードマップ",
-					link: "loadmap/auth",
+          link: "loadmap/auth",
+        },
+        {
+          label: "Luciaを使って最低限の機能を実装する",
+          autogenerate: {
+            directory: "pages/lucia-auth-base-app",
+          },
         },
         {
           label: "Auth.jsを使って実装した認証ボタンをカスタマイズする",

@@ -2,18 +2,20 @@
 title: 初期化ファイルを作成
 sidebar:
   order: 4
-draft: true
+draft: false
 ---
 
 ## `auth.ts`を作成
 
 https://lucia-auth.com/database/sqlite
 
+D1バインディングはリクエストに含まれるので、リクエストごとに新しいLuciaインスタンスを作成するためにinitializeLucia()関数を作成します。
+
 ```ts title="auth.ts"
 import { Lucia } from "lucia";
 import { D1Adapter } from "@lucia-auth/adapter-sqlite";
 
-export function initializeLucia() {
+export function initializeLucia(D1: D1Database) {
   const adapter = new D1Adapter(D1, {
     user: "user",
     session: "session",
@@ -28,9 +30,9 @@ declare module "lucia" {
 }
 ```
 
-## `D1Adapter`から`DrizzleSQLiteAdapter`に変更
+## `Adapter`を変更
 
-`D1Adapter`から`DrizzleSQLiteAdapter`に変更します。
+`D1Adapter`から`DrizzleSQLiteAdapter`に変更
 
 ```diff ts title="auth.ts"
 - import { D1Adapter } from "@lucia-auth/adapter-sqlite";
@@ -40,7 +42,8 @@ declare module "lucia" {
 + import { db } from "./drizzle/db";
 + import { sessionTable, userTable } from "./db/schema";
 
-  export function initializeLucia() {
+- export function initializeLucia(D1: D1Database) {
++ export function initializeLucia() {
 -   const adapter = new D1Adapter(D1, {
 -     user: "user",
 -     session: "session",
@@ -56,11 +59,12 @@ declare module "lucia" {
   }
 ```
 
-### 07
+## `Lucia`クラスに2つの引数を追加
 
 https://lucia-auth.com/tutorials/username-and-password/nextjs-app
 
-サンプルコードを参考に、必要なコードを追加
+サンプルコードを参考に、`Lucia`クラスにsessionCookieプロパティとgetUserAttributesプロパティを追加します。  
+また、モジュール宣言にDatabaseUserAttributesインターフェイスを作成します。
 
 ```diff ts title="auth.ts"
   import { DrizzleSQLiteAdapter } from "@lucia-auth/adapter-drizzle";
@@ -96,24 +100,29 @@ https://lucia-auth.com/tutorials/username-and-password/nextjs-app
   }
 ```
 
+また、型DatabaseUserAttributesを定義します。
+
 ```ts title="types.ts"
 type DatabaseUserAttributes = {
   username: string;
 };
 ```
 
-# 14
+## `validateRequest`を追加
+
+`validateRequest`を作成します。  
+セッションクッキーをチェックし、それを検証し、必要であれば新しいクッキーを設定します。
 
 ```diff ts title="auth.ts"
   import { getRequestContext } from "@cloudflare/next-on-pages";
   import { DrizzleSQLiteAdapter } from "@lucia-auth/adapter-drizzle";
   import { Lucia } from "lucia";
-  import { cookies } from "next/headers";
-  import { cache } from "react";
++ import { cookies } from "next/headers";
++ import { cache } from "react";
   import { db } from "./drizzle/db";
   import { sessionTable, userTable } from "./drizzle/schema";
 
-  import type { Session, User } from "lucia";
++ import type { Session, User } from "lucia";
 
   export function initializeLucia() {
     const adapter = new DrizzleSQLiteAdapter(db, sessionTable, userTable);

@@ -2,7 +2,7 @@
 title: ログイン機能
 sidebar:
   order: 6
-draft: true
+draft: false
 ---
 
 ## ログインフォーム

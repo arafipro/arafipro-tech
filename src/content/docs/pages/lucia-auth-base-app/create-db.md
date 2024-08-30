@@ -2,29 +2,31 @@
 title: 認証に必要なデータベースの準備
 sidebar:
   order: 3
-draft: true
+draft: false
 ---
 
 ## データベースを作成
 
 ```sh
-npx wrangler d1 create lucia-auth-db
+npx wrangler d1 create lucia-auth-base-db
 ```
 
 ## `wrangler.toml`
 
-データベースを作成時に出力されたD1の設定を追加します。
+データベースを作成時に出力されたD1の設定を追加します。  
+`<unique-ID-for-your-database>`はデータベースを作成したときに出力されるIDです。
 
 ```diff toml title="wrangler.toml"
-  name = "lucia-auth-app"
+  name = "lucia-auth-base-app"
   compatibility_date = "2024-08-21"
   compatibility_flags = ["nodejs_compat"]
   pages_build_output_dir = ".vercel/output/static"
 
 + [[d1_databases]]
 + binding = "DB"
-+ database_name = "lucia-auth-db"
-+ database_id = "67cd416b-f66e-4391-a65a-2425e030d628"
++ database_name = "lucia-auth-base-db"
+  # <unique-ID-for-your-database>はデータベースを作成したときに出力されるID
++ database_id = "<unique-ID-for-your-database>"
 + migrations_dir = "./drizzle/migrations"
 ```
 
@@ -44,7 +46,7 @@ export default defineConfig({
 
 https://lucia-auth.com/database/drizzle
 
-コードをコピーした後、不要なコードを削除して、usernameとpassword_hashを追加
+コードをコピーした後、不要なコードを削除して、usernameとpassword_hashを追加します。
 
 ```diff ts title="drizzle/schema.ts"
 - import { DrizzleSQLiteAdapter } from "@lucia-auth/adapter-drizzle";
@@ -79,12 +81,12 @@ https://lucia-auth.com/database/drizzle
 
 ```sh
 npx drizzle-kit generate
-npx wrangler d1 migrations apply lucia-auth-db --local
+npx wrangler d1 migrations apply lucia-auth-base-db --local
 ```
 
 ## Bindingsの型を定義
 
-https://developers.cloudflare.com/pages/framework-guides/nextjs/ssr/bindings/#typescript-type-declarations-for-bindings
+[参考サイト：Cloudflare Docs / TypeScript type declarations for bindings](https://developers.cloudflare.com/pages/framework-guides/nextjs/ssr/bindings/#typescript-type-declarations-for-bindings)
 
 BindingsのD1 Datebaseの型を定義します。
 
@@ -95,6 +97,8 @@ interface CloudflareEnv {
 ```
 
 ## drizzle/db.ts
+
+[参考サイト：Cloudflare Docs / Other Cloudflare APIs (cf, ctx)](https://developers.cloudflare.com/pages/framework-guides/nextjs/ssr/bindings/#other-cloudflare-apis-cf-ctx)
 
 BindingsのD1 Datebaseの型定義を取得します。  
 そして、drizzleにD1の型定義を渡します。

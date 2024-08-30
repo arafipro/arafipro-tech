@@ -2,12 +2,11 @@
 title: プロジェクトの作成
 sidebar:
   order: 1
-prev: false
-draft: true
+draft: false
 ---
 
 ## Next.js
 
 ```sh
-bun create cloudflare@latest
+bun create cloudflare@latest lucia-auth-base-app
 ```

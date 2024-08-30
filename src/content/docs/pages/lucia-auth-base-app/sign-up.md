@@ -2,13 +2,8 @@
 title: ユーザー登録機能
 sidebar:
   order: 5
-draft: true
+draft: false
 ---
-
-参考URL
-
-- https://github.com/cdbrw/cfw-bun-hono-drizzle/blob/feat/lucia-auth/src/api/auth.ts
-- https://lucia-auth.com/tutorials/username-and-password/nextjs-app
 
 ## ユーザー登録フォーム
 

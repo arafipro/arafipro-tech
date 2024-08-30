@@ -2,8 +2,7 @@
 title: ログアウト機能
 sidebar:
   order: 7
-next: false
-draft: true
+draft: false
 ---
 
 ## ログアウトボタン
