@@ -78,6 +78,12 @@ gtag('config', 'G-M9Y1L3NSGP');
             directory: "workers/langchain-openai-base-api",
           },
         },
+        // {
+        //   label: "プロンプトサンプル",
+        //   autogenerate: {
+        //     directory: "prompt-samples",
+        //   },
+        // },
       ],
       components: {
         Footer: "./src/components/ConditionalFooter.astro",
