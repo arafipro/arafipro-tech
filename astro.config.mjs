@@ -1,12 +1,14 @@
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import starlightBlog from "starlight-blog";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
       title: "TypeScriptでフルスタックエンジニア",
+      plugins: [starlightBlog()],
       head: [
         {
           tag: "script",
