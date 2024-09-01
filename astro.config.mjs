@@ -57,9 +57,10 @@ gtag('config', 'G-M9Y1L3NSGP');
       },
       sidebar: [
         {
-          label: "Auth.js(NextAuth)を学ぶロードマップ",
-          link: "loadmap/auth",
-        },
+          label: "学習ロードマップ",
+          autogenerate: {
+            directory: "loadmap",
+          },        },
         {
           label: "Luciaを使って最低限の機能を実装する",
           autogenerate: {
