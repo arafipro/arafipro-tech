@@ -67,12 +67,12 @@ gtag('config', 'G-M9Y1L3NSGP');
             directory: "pages/lucia-auth-base-app",
           },
         },
-        {
-          label: "Auth.jsを使って実装した認証ボタンをカスタマイズする",
-          autogenerate: {
-            directory: "pages/auth-custom-app",
-          },
-        },
+        // {
+        //   label: "Auth.jsを使って実装した認証ボタンをカスタマイズする",
+        //   autogenerate: {
+        //     directory: "pages/auth-custom-app",
+        //   },
+        // },
         {
           label: "OpenAI API+LangChainを使ったAPIを作る",
           autogenerate: {
